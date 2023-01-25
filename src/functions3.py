@@ -29,6 +29,7 @@ def pull_raw_data(start_date, end_date):
                 ELSE t1.qtyship
             END units,
             t1.prodcost unitcost,
+            t1.replcost,
             t1.price unitprice,
             CASE
                 WHEN t1.returnfl = 1 THEN t1.netamt * -1
